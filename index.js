@@ -36,3 +36,4 @@ class UI {
     document.querySelector('#author').value = '';
   }
 }
+
