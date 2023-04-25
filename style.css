@@ -1,0 +1,60 @@
+h1,
+h2 {
+  text-align: center;
+}
+
+#book-list {
+  border: 2px solid coral;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+table tr:nth-child(2n + 1) {
+  background-color: slateblue;
+  margin: 0.3rem;
+}
+
+.remove-td-btn {
+  float: right;
+}
+
+.remove-btn {
+  background-color: #f31e37;
+  color: white;
+  border: none;
+  padding: .0.3rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.underline {
+  height: 3px;
+  background-color: brown;
+  width: 30%;
+  margin: 0 auto;
+}
+
+#add-book-form {
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 60%;
+}
+
+#add-btn {
+  width: fit-content;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  #book-list {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #add-book-form {
+    width: 30%;
+  }
+}
