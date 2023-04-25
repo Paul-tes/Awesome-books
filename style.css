@@ -22,7 +22,7 @@ table tr:nth-child(2n + 1) {
   background-color: #f31e37;
   color: white;
   border: none;
-  padding: 0.3rem;
+  padding: .0.3rem;
   border-radius: 5px;
   font-weight: 600;
 }
@@ -46,4 +46,15 @@ table tr:nth-child(2n + 1) {
 #add-btn {
   width: fit-content;
   margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  #book-list {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #add-book-form {
+    width: 30%;
+  }
 }
