@@ -5,7 +5,6 @@ class Book {
   }
 }
 
-// ui class
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
@@ -37,3 +36,60 @@ class UI {
   }
 }
 
+class Store {
+  static getBooks() {
+    let books;
+    if(localStorage.getItem('books') === null) {
+      books = [];
+    } else {
+      books = JSON.parse(localStorage.getItem('books'));
+    }
+
+    return books;
+  }
+
+  static addBook(book) {
+    let books = Store.getBooks();
+    books.push(book);
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+
+  static removeBook(title) {
+    const books = Store.getBooks();
+    books.forEach((book, index) => {
+      if (book.title === title) {
+        books.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('books', JSON.stringify(books));
+  }
+}
+
+// add book 
+const addBtn = document.querySelector('#add-btn');
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  
+  if(title === '' || author === '') {
+    alert('please insert all values');
+  } else {
+    const book = new Book(title, author);
+    UI.addBookList(book);
+    Store.addBook(book);
+    UI.clearInput();
+  }
+})
+
+//display Books in a table
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
+// remove book
+document.querySelector('#book-list').addEventListener('click', (e)=> { // evenrt propagation
+  UI.removeBook(e.target);
+  const td = e.target.parentElement.previousElementSibling.textContent;
+  title = td.substr(0, td.indexOf(' by '));
+  Store.removeBook(title);
+})
