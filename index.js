@@ -18,4 +18,15 @@ class UI {
     `;
     table.appendChild(tr);
   }
+
+  static removeBook(elem) {
+    if(elem.classList.contains('remove-btn')) {
+      elem.parentElement.parentElement.remove();
+    }
+  }
+
+  static clearInput() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+  }
 }
