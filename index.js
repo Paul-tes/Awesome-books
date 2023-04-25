@@ -7,6 +7,12 @@ class Book {
 
 // ui class
 class UI {
+  static displayBooks() {
+    const books = Store.getBooks();
+    books.forEach((book) => UI.addBookList(book));
+
+  }
+
   static addBookList(book) {
     const table = document.getElementById('book-list');
     const tr = document.createElement('tr');
