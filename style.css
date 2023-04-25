@@ -47,14 +47,3 @@ table tr:nth-child(2n + 1) {
   width: fit-content;
   margin-left: auto;
 }
-
-@media (min-width: 768px) {
-  #book-list {
-    width: 40%;
-    margin: 0 auto;
-  }
-
-  #add-book-form {
-    width: 30%;
-  }
-}
