@@ -1,3 +1,4 @@
+import { Store } from "./Store";
 class Book {
   constructor(title, author) {
     this.title = title;
