@@ -93,3 +93,24 @@ document.querySelector('#book-list').addEventListener('click', (e)=> { // evenrt
   title = td.substr(0, td.indexOf(' by '));
   Store.removeBook(title);
 })
+
+//navigations
+document.querySelector('.header-nav').addEventListener('click', (e) => {
+  const target = e.target;
+  const listSection = document.querySelector('#list-section');
+  const addSection = document.querySelector('#add-book-section');
+  const contact = document.querySelector('#contact-section');
+  if(target.classList.contains('list-btn')) {
+    listSection.classList.remove('display-none');
+    addSection.classList.add('display-none');
+    contact.classList.add('display-none');
+  } else if(target.classList.contains('add-new-btn')) {
+    listSection.classList.add('display-none');
+    addSection.classList.remove('display-none');
+    contact.classList.add('display-none');
+  } else if (target.classList.contains('contact-btn')) {
+    listSection.classList.add('display-none');
+    addSection.classList.add('display-none');
+    contact.classList.remove('display-none');
+  }
+});

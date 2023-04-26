@@ -1,8 +1,15 @@
 
 
-/* body {
-  background-color: black;
-} */
+body {
+  background-color: rgb(66 72 100);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
 
 .header {
   position: fixed;
@@ -11,15 +18,48 @@
   font-weight: 400;
   display: flex;
   justify-content: space-around;
+  text-align: center;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
 }
 
-ul {
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.nav-lists-ul {
   display: flex;
   gap: 1rem;
   list-style: none;
+}
+
+#add-book-h2,
+.contact-section-h2,
+.list-section-h2 {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+#contact-section {
+  padding: 4rem;
+  margin-left: 1rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+a {
+  color: blanchedalmond;
+}
+
+.cont-ul {
+  display: flex;
+  flex-direction: column;
+  list-style: circle;
 }
 
 button {
@@ -29,13 +69,8 @@ button {
   border: none;
 }
 
-li:not(:first-child){
+.nav-lists-ul li:not(:first-child){
   border-left: 2px solid white;
-}
-
-h1,
-h2 {
-  text-align: center;
 }
 
 #book-list {
@@ -62,13 +97,6 @@ table tr:nth-child(2n + 1) {
   font-weight: 600;
 }
 
-.underline {
-  height: 3px;
-  background-color: brown;
-  width: 30%;
-  margin: 0 auto;
-}
-
 #add-book-form {
   padding: 1rem;
   margin: 0 auto;
@@ -92,4 +120,12 @@ table tr:nth-child(2n + 1) {
   #add-book-form {
     width: 30%;
   }
+}
+
+.display-none {
+  display: none;
+}
+
+.display {
+  display: block;
 }
