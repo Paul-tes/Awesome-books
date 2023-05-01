@@ -1,0 +1,131 @@
+
+
+body {
+  background-color: rgb(66 72 100);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+
+.header {
+  position: fixed;
+  background-color: rgb(59, 4, 110);
+  color: white;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: auto;
+  padding: 1rem;
+}
+
+.nav-lists-ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#add-book-h2,
+.contact-section-h2,
+.list-section-h2 {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+#contact-section {
+  padding: 4rem;
+  margin-left: 1rem;
+  width: 60%;
+  margin: 0 auto;
+}
+
+a {
+  color: blanchedalmond;
+}
+
+.cont-ul {
+  display: flex;
+  flex-direction: column;
+  list-style: circle;
+}
+
+button {
+  background: none;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.nav-lists-ul li:not(:first-child){
+  border-left: 2px solid white;
+}
+
+#book-list {
+  border: 2px solid coral;
+  width: 100%;
+  padding: 0.3rem;
+}
+
+table tr:nth-child(2n + 1) {
+  background-color: slateblue;
+  margin: 0.3rem;
+}
+
+.remove-td-btn {
+  float: right;
+}
+
+.remove-btn {
+  background-color: #f31e37;
+  color: white;
+  border: none;
+  padding: .0.3rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+#add-book-form {
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 60%;
+}
+
+#add-btn {
+  width: fit-content;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  #book-list {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  #add-book-form {
+    width: 30%;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+.display {
+  display: block;
+}
