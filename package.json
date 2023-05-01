@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "awesome-books",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a> <!-- TABLE OF CONTENTS -->",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-tes/Awesome-books.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paul-tes/Awesome-books/issues"
+  },
+  "homepage": "https://github.com/Paul-tes/Awesome-books#readme",
+  "dependencies": {
+    "luxon": "^3.3.0"
+  }
+}

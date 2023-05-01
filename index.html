@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Awesome Books Store</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-h1">Awesome Books</h1>
+    <nav class="header-nav">
+      <ul class="nav-lists-ul">
+        <li><Button class="list-btn">List</Button></li>
+        <li><Button class="add-new-btn">Add New</Button></li>
+        <li><Button class="contact-btn">Contact</Button></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="date-time"></div>
+  <section id="list-section" class="displsay-none">
+    <h2 class="list-section-h2">All awesome books</h2>
+    <table id="book-list">
+    </table>
+  </section>
+
+  <section id="add-book-section" class="display-none">
+    <form action="#" id="add-book-form">
+      <h2 id="add-book-h2">Add a new book</h2>
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="submit" value="add" id="add-btn">
+    </form>
+  </section>
+
+  <section id="contact-section" class="display-none">
+    <h2 class="contact-section-h2">Contact information</h2>
+    <p class="con-p2">Do you have any questions or you just want to say "Hello"? you can reach out to us</p>
+    <ul class="cont-ul">
+      <li>Our email <a href="#">paulasca8462@gmail.com</a></li>
+      <li>Our Phone number <a href="#">+251984796312</a></li>
+      <li>Our adderes addis ababa/ethiopia/zip=1000/homeNo29214</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p class="copirgh"> &copy; 2024 Awsome Books Addis ababa, Inc. All rights reserverd</p>
+  </footer>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
