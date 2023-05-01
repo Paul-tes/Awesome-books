@@ -1,13 +1,13 @@
 import Book from './modules/Book.js';
 import Store from './modules/Store.js';
-import { DateTime } from "./node_modules/luxon/src/luxon.js";
-class UI {
+import { DateTime } from './node_modules/luxon/src/luxon.js';
 
-  static displayTime() { 
+class UI {
+  static displayTime() {
     const time = document.createElement('p');
     time.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
     document.querySelector('#date-time').appendChild(time);
- }
+  }
 
   static displayBooks() {
     const books = Store.getBooks();
