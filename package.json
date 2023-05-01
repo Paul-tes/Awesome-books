@@ -20,6 +20,5 @@
   "homepage": "https://github.com/Paul-tes/Awesome-books#readme",
   "dependencies": {
     "luxon": "^3.3.0"
-  },
-  "devDependencies": {}
+  }
 }
