@@ -23,6 +23,15 @@ body {
   right: 0;
 }
 
+#date-time {
+  height: 10px;
+  position: fixed;
+  top: 5rem;
+  left: 80%;
+  width:fit-content;
+  color: white;
+}
+
 .footer {
   background-color: black;
   color: white;

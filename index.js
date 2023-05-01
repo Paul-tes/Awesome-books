@@ -1,10 +1,14 @@
 import Book from './modules/Book.js';
 import Store from './modules/Store.js';
-// import { DateTime } from "luxon";
-
-// const currnetDate = new DateTime();
-// console.log(currnetDate);
+import { DateTime } from "./node_modules/luxon/src/luxon.js";
 class UI {
+
+  static displayTime() { 
+    const time = document.createElement('p');
+    time.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+    document.querySelector('#date-time').appendChild(time);
+ }
+
   static displayBooks() {
     const books = Store.getBooks();
     books.forEach((book) => UI.addBookList(book));
@@ -33,6 +37,9 @@ class UI {
     document.querySelector('#author').value = '';
   }
 }
+
+// display time
+UI.displayTime();
 
 // add book
 const addBtn = document.querySelector('#add-btn');
