@@ -63,7 +63,7 @@ document.querySelector('#book-list').addEventListener('click', (e) => { // evenr
 
 // navigations
 document.querySelector('.header-nav').addEventListener('click', (e) => {
-  const target = e[target];
+  const target = e['target'];
   const listSection = document.querySelector('#list-section');
   const addSection = document.querySelector('#add-book-section');
   const contact = document.querySelector('#contact-section');
