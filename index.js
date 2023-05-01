@@ -1,16 +1,13 @@
-import { Store } from "./Store";
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
+import Book from "./modules/Book.js";
+import Store from "./modules/Store.js";
+// import { DateTime } from "luxon";
 
+// const currnetDate = new DateTime();
+// console.log(currnetDate);
 class UI {
   static displayBooks() {
     const books = Store.getBooks();
     books.forEach((book) => UI.addBookList(book));
-
   }
 
   static addBookList(book) {
@@ -34,36 +31,6 @@ class UI {
   static clearInput() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
-  }
-}
-
-class Store {
-  static getBooks() {
-    let books;
-    if(localStorage.getItem('books') === null) {
-      books = [];
-    } else {
-      books = JSON.parse(localStorage.getItem('books'));
-    }
-
-    return books;
-  }
-
-  static addBook(book) {
-    let books = Store.getBooks();
-    books.push(book);
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-
-  static removeBook(title) {
-    const books = Store.getBooks();
-    books.forEach((book, index) => {
-      if (book.title === title) {
-        books.splice(index, 1);
-      }
-    });
-
-    localStorage.setItem('books', JSON.stringify(books));
   }
 }
 
