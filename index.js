@@ -1,5 +1,5 @@
-import Book from "./modules/Book.js";
-import Store from "./modules/Store.js";
+import Book from './modules/Book.js';
+import Store from './modules/Store.js';
 // import { DateTime } from "luxon";
 
 // const currnetDate = new DateTime();
@@ -23,7 +23,7 @@ class UI {
   }
 
   static removeBook(elem) {
-    if(elem.classList.contains('remove-btn')) {
+    if (elem.classList.contains('remove-btn')) {
       elem.parentElement.parentElement.remove();
     }
   }
@@ -34,45 +34,44 @@ class UI {
   }
 }
 
-// add book 
+// add book
 const addBtn = document.querySelector('#add-btn');
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  
   if(title === '' || author === '') {
-    alert('please insert all values');
+    // error
   } else {
     const book = new Book(title, author);
     UI.addBookList(book);
     Store.addBook(book);
     UI.clearInput();
   }
-})
+});
 
-//display Books in a table
+// display Books in a table
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 // remove book
-document.querySelector('#book-list').addEventListener('click', (e)=> { // evenrt propagation
+document.querySelector('#book-list').addEventListener('click', (e) => { // evenrt propagation
   UI.removeBook(e.target);
   const td = e.target.parentElement.previousElementSibling.textContent;
-  title = td.substr(0, td.indexOf(' by '));
+  const title = td.substr(0, td.indexOf(' by '));
   Store.removeBook(title);
-})
+});
 
-//navigations
+// navigations
 document.querySelector('.header-nav').addEventListener('click', (e) => {
   const target = e.target;
   const listSection = document.querySelector('#list-section');
   const addSection = document.querySelector('#add-book-section');
   const contact = document.querySelector('#contact-section');
-  if(target.classList.contains('list-btn')) {
+  if (target.classList.contains('list-btn')) {
     listSection.classList.remove('display-none');
     addSection.classList.add('display-none');
     contact.classList.add('display-none');
-  } else if(target.classList.contains('add-new-btn')) {
+  } else if (target.classList.contains('add-new-btn')) {
     listSection.classList.add('display-none');
     addSection.classList.remove('display-none');
     contact.classList.add('display-none');

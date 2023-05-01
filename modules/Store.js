@@ -1,7 +1,7 @@
 export default class Store {
   static getBooks() {
     let books;
-    if(localStorage.getItem('books') === null) {
+    if (localStorage.getItem('books') === null) {
       books = [];
     } else {
       books = JSON.parse(localStorage.getItem('books'));
@@ -11,7 +11,7 @@ export default class Store {
   }
 
   static addBook(book) {
-    let books = Store.getBooks();
+    const books = Store.getBooks();
     books.push(book);
     localStorage.setItem('books', JSON.stringify(books));
   }
